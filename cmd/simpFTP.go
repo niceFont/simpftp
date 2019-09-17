@@ -9,7 +9,10 @@ func main() {
 	var err error
 
 	defer func() {
-		log.Fatal(err)
+		if err != nil {
+			log.Println(err)
+
+		}
 	}()
 
 	go func() {
